@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto',
+    sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+h2 {
+    color: #303030;
+    font-size: 36px;
+    line-height: 60px;
+    margin: 0;
+    font-family: 'Roboto',
+    sans-serif;
+}
+.container-fluid{
+    padding: 0;
+}
+.active{
+    display: block !important;
+}
+
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1165px;
+    }
+}
+
+#page-content {
+    flex: 1 0 auto;
+}
+
+#sticky-footer {
+    flex-shrink: none;
+}
+
+
+/*
+.your-style {
+    font-family: 'Roboto',
+    sans-serif;
+}
+.your-style {
+    font-family: 'Myriad Pro',
+    sans-serif;
+}
+.your-style {
+    font-family: 'Open Sans',
+    sans-serif;
+}
+.your-style {
+    font-family: 'Montserrat',
+    sans-serif;
+}
+*/

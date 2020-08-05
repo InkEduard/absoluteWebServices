@@ -1,0 +1,46 @@
+.button{
+    padding-top: 80px;
+    &__btn-wrap{
+        margin-top: 28px;
+    }
+    &__btn{
+        font-family: 'Montserrat',
+        sans-serif;
+        font-size: 14px;
+        padding: 13px 20px 13px 19px;
+        text-transform: uppercase;
+    }
+    &__btn + .button__btn{
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 991px){
+    .button{
+        background: #fff;
+        padding-top: 60px;
+        &__btn-wrap {
+            margin-top: 18px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .button{
+        &__btn-wrap{
+            margin-top: 0px;
+            flex-wrap: wrap;
+        }
+        &__btn+.button__btn {
+            margin-left: 0;
+        }
+        &__btn{
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+    }
+}
+@media (max-width: 576px){
+    .button{
+        padding-top: 30px;
+    }
+}

@@ -1,0 +1,219 @@
+.footer{
+    padding-top: 48px;
+    padding-bottom: 70px;
+    font-size: 16px;
+    &__title{
+        color: #0049b0;
+        font-weight: bold;
+    }
+    &__list{
+        list-style: none;
+        padding: 0;
+        padding-bottom: 70px;
+        margin: 0;
+    }
+    &__list-link{
+        display: inline-block;
+        color: #202020;
+        margin-top: 21px;
+    }
+    &__list-link:hover{
+        font-weight: bold;
+        color: #202020;
+        text-decoration: none;
+    }
+    .panel-heading a{
+        color: #0049b0;
+    }
+    &__list-social{
+        display: flex;
+        margin-top: 20px;
+    }
+    &__list-social li+li{
+        margin-left: 10px;
+    }
+    &__fb,
+    &__tw,
+    &__inst,
+    &__pint{
+        position: relative;
+        display: block;
+        height: 35px;
+        width: 40px;
+        border-radius: 2px;
+        background: #202020;
+    }
+    &__fb:hover,
+    &__tw:hover,
+    &__inst:hover,
+    &__pint:hover {
+        background: #0049b0;
+    }
+    &__fb::before,
+    &__tw::before,
+    &__inst::before,
+    &__pint::before {
+        font-family: 'icomoon';
+        position: absolute;
+        color: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__fb::before{
+        content: '\ea90';
+        font-size: 14px;
+    }
+    &__tw::before {
+        content: '\e901';
+        font-size: 20px;
+    }
+    &__inst::before {
+        content: '\ea92';
+        font-size: 16px;
+    }
+    &__pint::before {
+        content: '\e902';
+        font-size: 22px;
+    }
+}
+
+.panel-heading a{
+    font-weight: bold;
+}
+// sticky footer
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 20vh;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20vh;
+    /*высота футера будет зависеть от высоты экрана*/
+}
+
+@media (max-width: 991px){
+    .footer{
+        background: #f4f5f7;
+        padding-bottom: 53px;
+        &__list {
+            padding-bottom: 55px;
+        }
+        &__order{
+            display: flex;
+        }
+        &__order-item:nth-child(1) {
+            display: flex;
+            order: 2;
+            margin-top: 46px;
+        }
+        &__order-item:nth-child(2) {
+            display: flex;
+            order: 3;
+            margin-top: 46px;
+        }
+        &__order-item:nth-child(3) {
+            display: flex;
+            order: 4;
+            margin-top: 46px;
+        }
+        &__order-item:nth-child(4) {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            order: 1;
+        }
+    }
+    body{
+        background: #f4f5f7;
+    }
+}
+
+@media (max-width: 576px){
+    // tabs
+    .footer{
+        padding-bottom: 0;
+        &__wrap{
+            width: 100%;
+        }
+        &__list{
+            max-width: 576px;
+            padding-bottom: 0;
+        }
+        &__list .panel-link {
+            width: 100%;
+        }
+        &__list .panel-link a {
+            width: 100%;
+            border-bottom: 1px solid #fff;
+        }
+        &__list-link{
+            margin-top: 0;
+            padding: 17px 50px 18px 17px;
+        }
+        &__list-social{
+            display: flex;
+            justify-content: center;
+        }
+        &__order-item:nth-child(1) {
+            margin-top: 0;
+            margin-top: 24px;
+        }
+        &__order-item:nth-child(2) {
+            margin-top: 0;
+        }
+        &__order-item:nth-child(3) {
+            margin-top: 0;
+            border-bottom: 1px solid #fff;
+        }
+    }
+    .panel-heading:focus{
+        text-decoration: none;
+    }
+    .panel-heading a {
+        border-bottom: 1px solid #fff;
+        border-top: 1px solid #fff;
+        display: block;
+        width: 100% ;
+        padding: 17px 50px 18px 17px;
+        position: relative;
+        transition: 0.3s;
+        color: #000;
+        font-weight: bold;
+    }
+    .panel-heading a:focus {
+        color: #0049b0;
+        text-decoration: none;
+    }
+    .panel-heading a:hover {
+        color: #0049b0;
+    }
+    .panel-heading a i {
+        font-size: 16px;
+        width: 30px;
+    }
+    .panel-heading a::after {
+        content: "\e906";
+        font-family: 'icomoon';
+        position: absolute;
+        font-size: 24px;
+        right: 15px;
+        transform: translateY(-2px);
+        transition: 0.3s;
+    }
+    .panel-heading.in a::after {
+        transform: rotate(180deg);
+    }
+    .panel-heading.in a {
+        color: #0049b0;
+    }
+    .panel-collapse {
+        display: none;
+    }
+}

@@ -1,0 +1,234 @@
+.inputs{
+    padding-top: 83px;
+    font-family: 'Open Sans',
+    sans-serif;
+    font-size: 15px;
+    &__wrap{
+        margin-top: 35px;
+    }
+    &__item + .inputs__item{
+        margin-left: 28px;
+    }
+}
+
+/* checkbox */
+.checkbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.checkbox__input {
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+}
+
+.checkbox__label {
+    font-size: 14px;
+    padding-top: 2px;
+    padding-left: 30px;
+    margin-bottom: 0;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.checkbox__label::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #464646;
+}
+
+.checkbox__label::after {
+    content: "\ea10";
+    font-family: 'icomoon';
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    color: #31a5e7;
+    font-size: 8px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+.checkbox__input:checked+.checkbox__label::before {
+    border-color: #31a5e7;
+}
+
+.checkbox__input:checked+.checkbox__label::after {
+    opacity: 1;
+}
+
+.checkbox__label:hover {
+    color: #a7a7a7;
+}
+
+// radio
+.radio {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.radio__input {
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+}
+
+.radio__label {
+    padding-top: 1px;
+    padding-left: 30px;
+    margin-bottom: 0;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.radio__label::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #464646;
+    border-radius: 50%;
+}
+
+.radio__label::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 2;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    transition: opacity .2s linear;
+    opacity: 0;
+}
+
+.radio__input:checked+.radio__label::before {
+    border-color: #31a5e7;
+}
+
+.radio__input:checked+.radio__label::after {
+    border-color: #31a5e7;
+    background: #31a5e7;
+    opacity: 1;
+}
+
+.radio__label:hover {
+    color: #a7a7a7;
+}
+
+// switcher
+.switcher {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.switcher__input {
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+}
+
+.switcher__label {
+    font-size: 14px;
+    padding-top: 2px;
+    padding-left: 68px;
+    margin-bottom: 0;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.switcher__label::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 47px;
+    height: 20px;
+    background: #f49a9e;
+    border-radius: 10px;
+}
+
+.switcher__label::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 16px;
+    width: 16px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 2;
+    transition: transform .4s linear;
+}
+
+.switcher__input:checked+.switcher__label::before {
+    background: #34bf49;
+}
+
+.switcher__input:checked+.switcher__label::after {
+    transform: translateX(27px);
+}
+
+.switcher__label:hover {
+    color: #a7a7a7;
+}
+
+@media (max-width: 991px){
+    .inputs{
+        background: #fff;
+        padding-top: 63px;
+        .inputs__wrap{
+            display: flex;
+            justify-content: space-between;
+            margin: 35 auto 0 auto;
+        }
+        &__item+.inputs__item {
+            margin-left: 0;
+            margin-right: auto;
+        }
+        &__item{
+            margin-right: auto;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .inputs {
+        padding-top: 30px;
+        &__wrap {
+            margin: 24px auto 0 auto;
+        }
+        &__inner{
+            display: flex;
+            flex-direction: column;
+        }
+        &__item {
+            margin-right: auto;
+        }
+        &__item+.inputs__item {
+            margin-top: 21px;
+        }
+    }
+}
