@@ -32,6 +32,13 @@
     &__list-social li+li{
         margin-left: 10px;
     }
+    &__title-link:hover {
+        text-decoration: none;
+    }
+    &__title-link,
+    &__title {
+        cursor: default;
+    }
     &__fb,
     &__tw,
     &__inst,

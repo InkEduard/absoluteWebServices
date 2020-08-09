@@ -307,10 +307,10 @@ h2 {
 .header__menu-wrap {
   margin-top: 28px;
   background: #f4f5f7;
+  width: 100%;
 }
 
 .header__menu {
-  max-width: 1165px;
   width: 100%;
   padding: 0 !important;
   margin: 0 auto;
@@ -356,7 +356,7 @@ h2 {
   top: 0;
   left: 0;
   width: 100%;
-  background: #fff;
+  background: #f4f5f7;
   z-index: 100;
   margin-top: 0;
 }
@@ -366,7 +366,7 @@ h2 {
 }
 
 .padding-b-plus {
-  padding-bottom: 60px;
+  padding-bottom: 90px;
 }
 
 @media (min-width: 1200px) {
@@ -1349,6 +1349,15 @@ h2 {
 
 .footer__list-social li + li {
   margin-left: 10px;
+}
+
+.footer__title-link:hover {
+  text-decoration: none;
+}
+
+.footer__title-link,
+.footer__title {
+  cursor: default;
 }
 
 .footer__fb,
