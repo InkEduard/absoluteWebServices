@@ -35,44 +35,6 @@ serchBtn.addEventListener('click', () => {
 })
 
 // headeer scroll
-// $(document).ready(function () {
-//     var $menu = $("#menu");
-//     $(window).scroll(function () {
-//         if ($(this).scrollTop() > 10 && $menu.hasClass("default")) {
-//             $menu.fadeOut('fast', function () {
-//                 $(this).removeClass("default").addClass("fixed transbg").fadeIn('fast');
-//             });
-//         } else if ($(this).scrollTop() <= 10 && $menu.hasClass("fixed")) {
-//             $menu.fadeOut('fast', function () {
-//                 $(this).removeClass("fixed transbg").addClass("default").fadeIn('fast');
-//             });
-//         }
-//     });//scroll
-//     $menu.hover(
-//         function () {
-//             if ($(this).hasClass('fixed')) {
-//                 $(this).removeClass('transbg');
-//             }
-//         },
-//         function () {
-//             if ($(this).hasClass('fixed')) {
-//                 $(this).addClass('transbg');
-//             }
-//         });//hover
-// });//jQuery
-
-// window.onscroll = function() {scrollFunction()};
-
-// function scrollFunction() {
-//     let scrollPos = 100;
-//     let header = document.getElementById('header-menu');
-
-//     if (document.body.scrollTop > scrollPos || document.documentElement.scrollTop > scrollPos) {
-//         header.classList.add('active-scroll');
-//     } else {
-//         header.classList.remove('active-scroll');
-//     }
-// }
 $(window).scroll(function () {
     if ($(window).scrollTop() >= 100) {
         $('#header-menu').addClass('fixed-header');
@@ -83,7 +45,6 @@ $(window).scroll(function () {
         $('.header').removeClass('padding-b-plus');
     }
 });
-
 
 // slider
 $(document).ready(function () {

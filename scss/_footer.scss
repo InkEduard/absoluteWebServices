@@ -1,6 +1,7 @@
 .footer{
     padding-top: 48px;
     padding-bottom: 70px;
+    margin-top: auto;
     font-size: 16px;
     &__title{
         color: #0049b0;
@@ -9,7 +10,6 @@
     &__list{
         list-style: none;
         padding: 0;
-        padding-bottom: 70px;
         margin: 0;
     }
     &__list-link{
@@ -81,30 +81,11 @@
 .panel-heading a{
     font-weight: bold;
 }
-// sticky footer
-html {
-    position: relative;
-    min-height: 100%;
-}
-body {
-    margin-bottom: 20vh;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 20vh;
-    /*высота футера будет зависеть от высоты экрана*/
-}
 
 @media (max-width: 991px){
     .footer{
         background: #f4f5f7;
         padding-bottom: 53px;
-        &__list {
-            padding-bottom: 55px;
-        }
         &__order{
             display: flex;
         }

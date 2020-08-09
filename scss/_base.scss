@@ -15,11 +15,14 @@ h2 {
     font-family: 'Roboto',
     sans-serif;
 }
-.container-fluid{
-    padding: 0;
-}
 .active{
     display: block !important;
+}
+.page{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 @media (min-width: 1200px) {
@@ -31,31 +34,3 @@ h2 {
         max-width: 1165px;
     }
 }
-
-#page-content {
-    flex: 1 0 auto;
-}
-
-#sticky-footer {
-    flex-shrink: none;
-}
-
-
-/*
-.your-style {
-    font-family: 'Roboto',
-    sans-serif;
-}
-.your-style {
-    font-family: 'Myriad Pro',
-    sans-serif;
-}
-.your-style {
-    font-family: 'Open Sans',
-    sans-serif;
-}
-.your-style {
-    font-family: 'Montserrat',
-    sans-serif;
-}
-*/
